@@ -10,7 +10,7 @@ export default () => (
     <div className="container">
       <div className="row justify-content-md">
         <div className="col-xs-6">
-          <Post />
+          <Post title="This is our first post" excerpt="Wer are writing something to be displayed in our excerpt" />
         </div>
       </div>
     </div>
