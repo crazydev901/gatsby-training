@@ -8,10 +8,13 @@ export default ({ data }) => {
   console.log(data)
   return (
     <PrimaryLayout column="col-xs-6">
-      <Post
-        title="This is our first post"
-        excerpt="Wer are writing something to be displayed in our excerpt"
-      />
+      {data.allMarkdownRemark.nodes.map(node => (
+        <Post
+          image={node.frontmatter.image}
+          title={node.frontmatter.title}
+          excerpt={node.excerpt}
+        />
+      ))}
     </PrimaryLayout>
   )
 }
