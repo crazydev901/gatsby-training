@@ -17,5 +17,13 @@ module.exports = {
       },
     },
     { resolve: `gatsby-transformer-remark` },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: `dashcodingsrc.wordpress.com`,
+        protocol: `https`,
+        hostingWPCOM: true,
+      },
+    },
   ],
 }
